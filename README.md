@@ -1,4 +1,4 @@
-Visual Studio 2012 Teamcity tests runner (kinda)
+Visual Studio 2013 Teamcity tests runner (kinda)
 ======================
 
 VSTest logger for TeamCity
@@ -6,7 +6,7 @@ VSTest logger for TeamCity
 
 Why
 --
-Visual Studio 2012 gives you Fakes & Shims. Unfortunately you must use *vstest.console.exe* 
+Visual Studio 2013 gives you Fakes & Shims. Unfortunately you must use *vstest.console.exe* 
 to run these tests in TeamCity (or *ShimsNotSupportedException* will be thrown in your face) [3]. 
 This means no more "Test" tab in build results. __Unles__ you use this logger.
 
@@ -22,9 +22,9 @@ From Vikram Agrawal blog entry [1]:
 There are two requirements for custom test logger
 
 > 1. Implement interface Microsoft.VisualStudio.TestPlatform.ObjectModel.Client.ITestLogger
->		Interface can be found in __�C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll�__
+>		Interface can be found in __C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll__
 >
-> 2. Assembly containing logger implementation to be present in place where extensions are searched like __"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\Extensions"__
+> 2. Assembly containing logger implementation to be present in place where extensions are searched like __"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\Extensions"__
 >		Assembly can be installed with VSIX like test adapters. In that case use /UseVSIXExtensions parameter also.
 >
 
